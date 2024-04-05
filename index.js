@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // URL de la API
-const url = "";
+const url = process.env.CONSUMER_KEY;
 
 // Parámetro a enviar en el cuerpo de la petición
 const data = {
