@@ -1,6 +1,7 @@
 name: Ejecutar S
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 1 * * *'
 
@@ -16,4 +17,6 @@ jobs:
     - name: Instalar dependencias
       run: npm install
     - name: Ejecutar script
-      run: node index.js # Reemplaza tu-script.js con el nombre de tu archivo
+      env:
+        CONSUMER: ${{ secrets.CONSUMER_KEY }} # Paso el secreto como variable de entorno
+      run: node index.js
