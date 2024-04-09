@@ -30,6 +30,7 @@ axios.post(url, dataD)
         }
         const data = response.data;
         let valorUF = Math.round(data.uf.valor);
+        console.log(valorUF)
         const dataU = {
           solicitud: sl2,
           valor: valorUF
