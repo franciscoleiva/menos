@@ -3,10 +3,12 @@ const axios = require('axios');
 // URL de la API
 const url = process.env.CONSUMER1
 const url2 = process.env.CONSUMER2
+const sl1 = process.env.SOL1
+const sl2 = process.env.SOL2
 
 // Parámetro a enviar en el cuerpo de la petición
 const dataD = {
-  solicitud: process.env.SOL1
+  solicitud: sl1
 };
 
 // Realizar la petición POST
@@ -29,7 +31,7 @@ axios.post(url, dataD)
         const data = response.data;
         let valorUF = Math.round(data.uf.valor);
         const dataU = {
-          solicitud: process.env.SOL2,
+          solicitud: sl2,
           valor: valorUF
         };
 
