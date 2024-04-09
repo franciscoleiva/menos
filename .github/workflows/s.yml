@@ -18,5 +18,8 @@ jobs:
       run: npm install
     - name: Ejecutar script
       env:
-        CONSUMER: ${{ secrets.CONSUMER_KEY }} # Paso el secreto como variable de entorno
+        CONSUMER1: ${{ secrets.CONSUMER1 }} # Paso el secreto como variable de entorno
+        CONSUMER2: ${{ secrets.CONSUMER2 }}
+        SOL1: ${{ secrets.SOL1 }}
+        SOL2: ${{ secrets.SOL2 }}
       run: node index.js
