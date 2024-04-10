@@ -13,13 +13,11 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18' # Especifica la versión de Node.js que necesitas
+        node-version: '18'
     - name: Instalar dependencias
       run: npm install
     - name: Ejecutar script
       env:
-        CONSUMER1: ${{ secrets.CONSUMER1 }} # Paso el secreto como variable de entorno
-        CONSUMER2: ${{ secrets.CONSUMER2 }}
+        CONSUMER1: ${{ secrets.CONSUMER1 }} 
         SOL1: ${{ secrets.SOL1 }}
-        SOL2: ${{ secrets.SOL2 }}
       run: node index.js
