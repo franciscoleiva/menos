@@ -1,9 +1,9 @@
 name: Ejecutar S
 
 on:
-  #workflow_dispatch:
+  workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'#asd
+    - cron: '0 1 * * *'#asdf
 
 jobs:
   execute-script:
