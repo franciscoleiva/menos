@@ -3,7 +3,7 @@ name: Ejecutar S
 on:
   #workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *' #asdfa
+    - cron: '0 1 * * *' #asdfaa
 
 jobs:
   execute-script:
